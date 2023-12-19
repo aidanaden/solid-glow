@@ -36,4 +36,4 @@ jobs:
       #     CI: true
 
       - name: Format, Lint
-        run: pnpm run ci
+        run: pnpm run lint
