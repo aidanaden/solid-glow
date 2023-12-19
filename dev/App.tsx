@@ -1,4 +1,5 @@
 import type { Component } from "solid-js";
+import { Glow, GlowCapture } from "./../src/index";
 import styles from "./App.module.css";
 import logo from "./logo.svg";
 
@@ -19,6 +20,17 @@ const App: Component = () => {
           Learn Solid
         </a>
       </header>
+      <div>
+        GLOW CAPTURE:
+        <GlowCapture>
+          <span>This won't glow</span>
+          <Glow color="hsl(338.69 100% 48.04%)">
+            <span class="glowable-text">
+              This will glow pink when the mouse is passed over
+            </span>
+          </Glow>
+        </GlowCapture>
+      </div>
     </div>
   );
 };

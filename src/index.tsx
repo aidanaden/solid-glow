@@ -20,9 +20,9 @@ export const GlowCapture: Component<GlowCaptureProps> = (props) => {
       if (e.pointerType === "mouse") {
         requestAnimationFrame(() => {
           // @ts-ignore
-          element.current?.style.setProperty("--glow-x", `${e.layerX}px`);
+          element.style.setProperty("--glow-x", `${e.offsetX}px`);
           // @ts-ignore
-          element.current?.style.setProperty("--glow-y", `${e.layerY}px`);
+          element.style.setProperty("--glow-y", `${e.offsetY}px`);
         });
       }
     };
@@ -50,7 +50,9 @@ export const GlowCapture: Component<GlowCaptureProps> = (props) => {
         "--glow-size": `${local.size}px`,
       }}
       {...rest}
-    />
+    >
+      {local.children}
+    </div>
   );
 };
 
@@ -61,11 +63,17 @@ calc(var(--glow-y, -99999px) - var(--glow-top, 0px)), #000000 1%, transparent 50
 
 type GlowProps = ComponentProps<"div"> & {
   color: string;
-  debug: boolean;
+  debug?: boolean;
 };
 
 export const Glow: Component<GlowProps> = (props) => {
-  const [local, rest] = splitProps(props, ["class", "style", "children"]);
+  const [local, rest] = splitProps(props, [
+    "class",
+    "style",
+    "children",
+    "color",
+    "debug",
+  ]);
   let element: HTMLDivElement;
 
   createEffect(() => {
@@ -82,9 +90,10 @@ export const Glow: Component<GlowProps> = (props) => {
     });
 
     const capture = element.closest(".glow-capture");
-    if (capture) observer.observe(capture);
-
-    return () => observer.disconnect();
+    if (capture) {
+      observer.observe(capture);
+    }
+    onCleanup(() => observer.disconnect());
   });
 
   return (
@@ -100,15 +109,15 @@ export const Glow: Component<GlowProps> = (props) => {
         {local.children}
       </div>
       <div
-        class={`glow-mask ${props.class}`}
+        class={`glow-mask ${local.class}`}
         // @ts-ignore
         glow="true"
         style={{
-          "--glow-color": props.color,
+          "--glow-color": local.color,
           "grid-area": "1/1/1/1",
           "pointer-events": "none",
-          mask: props.debug ? undefined : mask,
-          "-webkit-mask": props.debug ? undefined : mask,
+          mask: local.debug ? undefined : mask,
+          "-webkit-mask": local.debug ? undefined : mask,
         }}
         {...rest}
       >

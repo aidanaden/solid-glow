@@ -2,7 +2,13 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "no-only-tests", "eslint-comments"],
-  "ignorePatterns": ["node_modules", "dist", "dev", "tsup.config.ts", "vitest.config.ts"],
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    "dev",
+    "tsup.config.ts",
+    "vitest.config.ts"
+  ],
   "parserOptions": {
     "project": "./tsconfig.json",
     "tsconfigRootDir": ".",
@@ -10,7 +16,7 @@
   },
   "rules": {
     "prefer-const": "warn",
-    "no-console": "warn",
+    // "no-console": "warn",
     "no-debugger": "warn",
     "@typescript-eslint/no-unused-vars": [
       "warn",
