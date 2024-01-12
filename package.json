@@ -1,6 +1,6 @@
 {
   "name": "solid-glow",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Add a mouse-tracing glow effect to Solid components",
   "license": "MIT",
   "author": "aidanaden",
@@ -12,6 +12,9 @@
   "homepage": "https://github.com/aidanaden/solid-glow#readme",
   "bugs": {
     "url": "https://github.com/aidanaden/solid-glow/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "files": [
     "dist",
@@ -57,6 +60,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.4.1",
+    "@changesets/cli": "^2.27.1",
     "@types/node": "^20.10.5",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
