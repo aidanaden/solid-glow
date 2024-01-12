@@ -1,0 +1,14 @@
+{
+  "\u0000virtual:#vinxi/handler/client.css": {
+    "file": "assets/client-077a2b3c.css",
+    "src": "\u0000virtual:#vinxi/handler/client.css"
+  },
+  "virtual:#vinxi/handler/client": {
+    "css": [
+      "assets/client-077a2b3c.css"
+    ],
+    "file": "assets/client-e2fe8486.js",
+    "isEntry": true,
+    "src": "virtual:#vinxi/handler/client"
+  }
+}

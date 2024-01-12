@@ -1,0 +1,7 @@
+{
+  "virtual:#vinxi/handler/ssr": {
+    "file": "ssr.js",
+    "isEntry": true,
+    "src": "virtual:#vinxi/handler/ssr"
+  }
+}
