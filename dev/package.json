@@ -8,9 +8,10 @@
   },
   "dependencies": {
     "@solidjs/start": "^0.4.9",
+    "highlight.js": "11.9.0",
+    "solid-glow": "^0.0.1",
     "solid-js": "^1.8.11",
-    "vinxi": "0.1.2",
-    "highlight.js": "11.9.0"
+    "vinxi": "0.1.2"
   },
   "engines": {
     "node": ">=18"
