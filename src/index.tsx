@@ -61,7 +61,7 @@ export const GlowCapture: Component<GlowCaptureProps> = (_props) => {
 const mask = `radial-gradient(var(--glow-size) var(--glow-size) at calc(var(--glow-x, -99999px) - var(--glow-left, 0px)) calc(var(--glow-y, -99999px) - var(--glow-top, 0px)), #000000 1%, transparent 50%)`;
 
 type GlowProps = ComponentProps<"div"> & {
-  color: string;
+  color?: string;
   debug?: boolean;
 };
 

@@ -1,6 +1,6 @@
 {
   "name": "solid-glow",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Add a mouse-tracing glow effect to Solid components",
   "license": "MIT",
   "author": "aidanaden",

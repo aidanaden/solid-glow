@@ -80,7 +80,7 @@ You can style the glow effect with vanilla CSS:
 <GlowCapture>
   <span>This won't glow</span>
   <Glow color="hsl(338.69 100% 48.04%)">
-    <span className="glowable-text">
+    <span class="glowable-text">
       This will glow pink when the mouse is passed over
     </span>
   </Glow>

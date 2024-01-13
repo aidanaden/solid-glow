@@ -1,5 +1,11 @@
 # solid-glow
 
+## 0.0.8
+
+### Patch Changes
+
+- optional color
+
 ## 0.0.5
 
 ### Patch Changes
