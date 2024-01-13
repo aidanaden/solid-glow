@@ -9,6 +9,7 @@
     "esModuleInterop": true,
     "noEmit": true,
     "isolatedModules": true,
+    "declaration": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,

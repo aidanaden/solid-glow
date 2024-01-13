@@ -10,7 +10,7 @@ const App: Component = () => {
       <GlowCapture>
         <span>This won't glow</span>
         <Glow color="hsl(338.69 100% 48.04%)">
-          <span class="glowable-text">
+          <span class="text-black glow:text-glow">
             This will glow pink when the mouse is passed over
           </span>
         </Glow>

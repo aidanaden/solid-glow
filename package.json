@@ -1,6 +1,6 @@
 {
   "name": "solid-glow",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "description": "Add a mouse-tracing glow effect to Solid components",
   "license": "MIT",
   "author": "aidanaden",
@@ -28,19 +28,24 @@
   "types": "./dist/index.d.ts",
   "browser": {},
   "exports": {
-    "solid": {
-      "development": "./dist/dev.jsx",
-      "import": "./dist/index.jsx"
-    },
-    "development": {
+    ".": {
+      "solid": {
+        "development": "./dist/dev.jsx",
+        "import": "./dist/index.jsx"
+      },
+      "development": {
+        "import": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/dev.js"
+        }
+      },
       "import": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/dev.js"
+        "default": "./dist/index.js"
       }
     },
-    "import": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+    "./tailwind": {
+      "default": "./src/tailwind.js"
     }
   },
   "typesVersions": {},
