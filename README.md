@@ -42,7 +42,7 @@ Wrap any number of `<Glow>` components in a `<GlowCapture>` which will be used t
 <GlowCapture>
   <span>This won't glow</span>
   <Glow color="purple">
-    <span className="text-black glow:text-glow/50 glow:bg-red-100">
+    <span class="text-black glow:text-glow/50 glow:bg-red-100">
       This will glow purple when the mouse is passed over
     </span>
   </Glow>
