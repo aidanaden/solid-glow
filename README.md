@@ -16,7 +16,7 @@
 
 [![solid-glow](https://nodei.co/npm/solid-glow.png)](https://npmjs.org/package/solid-glow)
 
-Add a mouse-tracing glow effect to React components.
+Add a mouse-tracing glow effect to Solid components.
 
 ![gif of glow effect](./media/glow.gif)
 
@@ -65,7 +65,7 @@ Add the tailwind plugin to unlock the `glow:` variant and `glow` color
 module.exports = {
   ...
   plugins: [
-    require('@codaworks/react-glow/tailwind')
+    require('solid-glow/tailwind')
   ]
 }
 ```
