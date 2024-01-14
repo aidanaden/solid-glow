@@ -99,4 +99,4 @@ You can style the glow effect with vanilla CSS:
 
 ## Attribution
 
-SolidJS port of [react-glow](https://twitter.com/codepen/status/1696297659663888490).
+SolidJS port of [react-glow](https://github.com/codaworks/react-glow).
