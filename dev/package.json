@@ -11,7 +11,7 @@
     "highlight.js": "11.9.0",
     "solid-glow": "^0.0.8",
     "solid-js": "^1.8.11",
-    "vinxi": "0.1.2"
+    "vinxi": "0.1.4"
   },
   "engines": {
     "node": ">=18"
