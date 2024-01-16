@@ -86,7 +86,10 @@
     "vite-plugin-solid": "^2.8.0"
   },
   "keywords": [
-    "solid"
+    "solid",
+    "glow",
+    "solidjs",
+    "solidjs-component"
   ],
   "packageManager": "pnpm@8.6.0",
   "engines": {
