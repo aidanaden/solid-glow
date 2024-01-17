@@ -1,6 +1,6 @@
 {
   "name": "solid-glow",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Add a mouse-tracing glow effect to Solid components",
   "license": "MIT",
   "author": "aidanaden",
@@ -23,32 +23,41 @@
   "private": false,
   "sideEffects": false,
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/index/index.js",
+  "module": "./dist/index/index.js",
+  "types": "./dist/index/index.d.ts",
   "browser": {},
   "exports": {
     ".": {
       "solid": {
-        "development": "./dist/dev.jsx",
-        "import": "./dist/index.jsx"
+        "development": "./dist/index/dev.jsx",
+        "import": "./dist/index/index.jsx"
       },
       "development": {
         "import": {
-          "types": "./dist/index.d.ts",
-          "default": "./dist/dev.js"
+          "types": "./dist/index/index.d.ts",
+          "default": "./dist/index/dev.js"
         }
       },
       "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
+        "types": "./dist/index/index.d.ts",
+        "default": "./dist/index/index.js"
       }
     },
     "./tailwind": {
-      "default": "./src/tailwind.js"
+      "import": {
+        "types": "./dist/tailwind/index.d.ts",
+        "default": "./dist/tailwind/index.js"
+      }
     }
   },
-  "typesVersions": {},
+  "typesVersions": {
+    "*": {
+      "tailwind": [
+        "./dist/tailwind/index.d.ts"
+      ]
+    }
+  },
   "scripts": {
     "dev": "vite serve dev",
     "build": "tsup",

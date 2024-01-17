@@ -11,6 +11,10 @@ const preset_options: preset.PresetOptions = {
       // will generate a separate development entry
       dev_entry: true,
     },
+    {
+      // entries with '.tsx' extension will have `solid` export condition generated
+      entry: "src/tailwind.js",
+    },
   ],
   // Set to `true` to remove all `console.*` calls and `debugger` statements in prod builds
   drop_console: true,
@@ -29,16 +33,16 @@ export default defineConfig((config) => {
 
   const parsed_options = preset.parsePresetOptions(preset_options, watching);
 
-  // if (!watching && !CI) {
-  //   const package_fields = preset.generatePackageExports(parsed_options);
+  if (!watching && !CI) {
+    const package_fields = preset.generatePackageExports(parsed_options);
 
-  //   console.log(
-  //     `package.json: \n\n${JSON.stringify(package_fields, null, 2)}\n\n`
-  //   );
+    console.log(
+      `package.json: \n\n${JSON.stringify(package_fields, null, 2)}\n\n`
+    );
 
-  //   // will update ./package.json with the correct export fields
-  //   preset.writePackageJson(package_fields);
-  // }
+    // will update ./package.json with the correct export fields
+    preset.writePackageJson(package_fields);
+  }
 
   return preset.generateTsupOptions(parsed_options);
 });

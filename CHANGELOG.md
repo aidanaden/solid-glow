@@ -1,5 +1,11 @@
 # solid-glow
 
+## 0.0.9
+
+### Patch Changes
+
+- add tailwind export to tsup config
+
 ## 0.0.8
 
 ### Patch Changes
